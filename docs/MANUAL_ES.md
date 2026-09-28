@@ -278,6 +278,7 @@ Pulsa **Opciones avanzadas** para abrirlas.
 
 | Opción | Para qué | Por defecto |
 |---|---|---|
+| **Espera máxima hasta que el juego termine de cargar** | Después de la pantalla de carga, la herramienta espera a que **se vea la divisa** (o a que el juego deje de cargar) antes de comprobar divisa y límites. Termina en cuanto la ve; este es solo el máximo. Sube el valor si tienes juegos muy lentos; `0` = no esperar. | 30 s |
 | **Workers** | Cuántos juegos a la vez. Más = más rápido, pero el ordenador trabaja más. **Recomendado: 5**; hasta 8–10 si tienes 16 GB de RAM o más. | 5 |
 | **Idioma** | Idioma en que se abren los juegos. | en |
 | **Proveedores** | Probar solo algunos proveedores (se activa tras "Cargar juegos"). | todos |
@@ -627,6 +628,7 @@ aggregator-QA/
 | *Executable doesn't exist … chromium* | Ejecuta `npm run playwright:install`. |
 | Chromium no arranca (Linux) | Ejecuta `npx playwright install-deps chromium`. |
 | El ordenador va muy lento | Detén la prueba y vuelve a empezar con menos **Workers** (3–5). |
+| La divisa sale NOT_DETECTED pero en la captura se ve bien | El juego tardó más que la espera máxima. Sube **Espera máxima hasta que el juego termine de cargar** (Opciones avanzadas), por ejemplo a 60. |
 | Muchas capturas en blanco | El juego tarda en cargar. Abre `.env` y sube `GAME_SETTLE_TIMEOUT=20000`. Reinicia la herramienta. |
 | Casi todo sale REVIEW con NOT_DETECTED | Normal en tragaperras tipo "imagen". El juego suele estar bien; revisa algunas capturas. |
 | *REVIEW: la cadena HTTP falló … pero el juego cargó en el navegador* | El proveedor bloquea la comprobación rápida, pero el juego abre en el navegador. Suele estar bien. |
