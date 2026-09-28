@@ -1,0 +1,6 @@
+.results-wrap { max-height: 60vh; overflow: auto; }
+.results-wrap thead th { white-space: nowrap; font-size: .8rem; text-transform: uppercase; letter-spacing: .02em; }
+.status-badge { min-width: 4.2rem; font-weight: 600; }
+.log { max-height: 220px; overflow: auto; font-size: .75rem; padding: .75rem 1rem; background: #111827; color: #d1d5db; white-space: pre-wrap; }
+.counters .badge { min-width: 4.5rem; }
+.select2-container--bootstrap-5 .select2-selection { min-height: calc(1.5em + .75rem + 2px); }
